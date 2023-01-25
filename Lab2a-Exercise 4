@@ -1,0 +1,28 @@
+//Lab 2a Exercise 4
+int r = 0;     //initialize r value
+int g= 100;    //initialize g value
+int b = 150;   //initialize b value
+
+void setup() {
+  size(500,400);   //set screen size
+  background(204);   //set gray background
+  noStroke();      //no outline
+}
+void draw() 
+{ 
+   fill(r,g,b);    //set fill color to the current values
+   ellipse(mouseX, mouseY, 100, 100);  //draw a circle at mouse coordinates with diameter 100
+
+   if (r < 255)  
+       r = r + 1;
+   else
+       r = 0;
+   if ( g< 255)
+        g = g + 3;
+   else
+        g = 0; 
+   if ( b < 255)
+        b = b + 5;
+   else
+       b = 0; 
+}

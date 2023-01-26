@@ -1,0 +1,42 @@
+//2a. Challenge 2
+
+int r=0;   //initiate color
+int g=100;
+int b=150;
+
+void setup()
+{
+  size(500,500);  //setup size and background 
+ background(180);
+}
+
+
+void draw()       //drawing random color
+{ 
+   
+  if (r<255)
+     r= r+1;
+     else 
+     r=0;
+   if (g<255)
+     g= g+20;
+     else 
+     g=0;
+   if (r<255)
+     b= b+50;
+     else 
+     b=0;}
+
+void keyPressed()    //keyboard function
+{
+  if(key=='c' || key=='C')  //if press key c or C
+ { fill(r,g,b);             //drawing random circle colors
+  circle(mouseX,mouseY,mouseX);} // circle draw anywhere, size change when moving x direction
+  
+  else
+  {                     //other keys
+   fill(r,g,b);
+  rect(mouseX, mouseY,mouseX,mouseY);} //drawing random rectangle anywhere with size moves x and y
+  
+}
+ 

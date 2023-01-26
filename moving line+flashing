@@ -1,0 +1,35 @@
+//2a. Challenge3
+//moving line
+// line move from left and reverse
+//background change
+
+float background =120;
+float xCoordinate= 0.0;
+Boolean reverseDirection = false;
+
+void setup()
+{  size (500,500);
+   background(background);
+   strokeWeight(4);
+}
+
+void draw()
+{
+  if (xCoordinate == width)
+   reverseDirection = true;
+  
+  if(!reverseDirection)
+ {
+   background = background +0.00358;
+   xCoordinate = xCoordinate +1;
+  }
+  
+  else
+  {
+   xCoordinate = xCoordinate -1;
+   background = background -0.00358;
+  }
+
+  background(background);
+  line(xCoordinate,0,xCoordinate,height);
+ }
